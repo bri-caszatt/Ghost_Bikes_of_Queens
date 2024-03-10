@@ -5,16 +5,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-color: #000;
+    background-color: #71797E;
   }
   
   p {
     position: relative;
-    font-family: sans-serif;
+    font-family: Futura, sans-serif;
     font-size: 3em;
     letter-spacing: 4px;
     overflow: hidden;
-    background: linear-gradient(90deg, #000, #fff, #000);
+    background: linear-gradient(90deg, #71797E, #fff, #71797E);
     background-repeat: no-repeat;
     background-size: 80%;
     animation: animate 13s linear infinite;

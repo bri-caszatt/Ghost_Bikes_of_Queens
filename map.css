@@ -13,6 +13,6 @@
 
 #info_text {
 	font-size: 40px;
-	color: rgb(159, 159, 161);
-	text-shadow: 4px 4px lightgray;
+	color: rgb(113, 121, 126);
+	text-shadow: 4px 4px rgb(192, 192, 192);
 }
