@@ -11,6 +11,12 @@
 	font-family: Futura, sans-serif;
 }
 
+.topnav {
+	position: relative;
+	margin-left: 40px;
+	z-index: 1;
+}
+
 #info_text {
 	font-size: 40px;
 	color: #4E5456;
