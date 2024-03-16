@@ -203,6 +203,9 @@ unnamedN.bindPopup("<h3>Unnamed, Age 82</h3><p><strong>Date of crash:</strong> D
 const jorgeG = L.marker([40.72866965787714, -73.90576277525163], {icon: bikeIcon}).addTo(nycMap);
 jorgeG.bindPopup("<h3>Jorge Galicia, Age 47</h3><p><strong>Date of crash:</strong> February 22, 2024</p><p><strong>Neighborhood:</strong> Maspeth</p><p><strong>Intersection:</strong> Maurice Ave & 54 Ave</p><a href='https://qns.com/2024/02/corona-cyclist-killed-after-slamming-into-truck-on-northside-of-l-i-e-in-maspeth-nypd/'>Learn more</a>");
 
+const unnamedO = L.marker([40.766221715986525, -73.91894178465724], {icon: bikeIcon}).addTo(nycMap);
+unnamedO.bindPopup("<h3>Unnamed</h3><p><strong>Neighborhood:</strong> Astoria</p><p><strong>Intersection:</strong> 34 St & 34 Ave</p>");
+
 //add title
 L.Control.textbox = L.Control.extend({
     onAdd: function(map) {
