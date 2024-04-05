@@ -22,19 +22,113 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 9</div>
+    <img src="BordenAve_2St_4.jpg" alt="White bike and plaque attached to street sign" width="100%">
+    <div class="text">Robert Spencer, age 53. Borden Ave & 2 St.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 9</div>
+    <img src="21St_46Ave_5.jpg" alt="White bike and plaque attached to a street sign, next to parked car" width="100%">
+    <div class="text">Aaron Padwee, age 45. 21 St & 46 Ave.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 9</div>
+    <img src="QueensPlazaNorth_29St_4.jpg" alt="White plaque attached to street sign in bike path plaza" width="100%">
+    <div class="text">Kevin Lopez, age 28. Queens Plaza North & 29 St.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 9</div>
+    <img src="MauriceAve_BordenAve.jpg" alt="White plaque attached to street sign near highway entrance" width="100%">
+    <div class="text">Pedro Lopez, age 54. Maurice Ave & Borden Ave.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 9</div>
+    <img src="48St_LIE.jpg" alt="White bike chained to post with weeds growing around it near highway entrance" width="100%">
+    <div class="text">Hugo Ramirez, age 23. 48 St & Long Island Expwy.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 9</div>
+    <img src="35St_23Ave_5.jpg" alt="White bike and plaque chained to street sign between a car parked on the street and another parked on the sidewalk" width="100%">
+    <div class="text">Xellea Samonte, age 22. 35 St & 23 Ave.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">7 / 9</div>
+    <img src="34St_30Ave_2.jpg" alt="White bike with bent back tire chained to metal bike rack near parked cars" width="100%">
+    <div class="text">Unnamed. 34 St & 30 Ave.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">8 / 9</div>
+    <img src="Broadway_BaxterAve_7.jpg" alt="White plaque and white bike decorated with fake flowers chained to street sign in median" width="100%">
+    <div class="text">Antonio Flores, age 59. Broadway & Baxter Ave.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">9 / 9</div>
+    <img src="31Ave_51St.jpg" alt="White bike chained to street sign near intersection" width="100%">
+    <div class="text">Salvador Chairez-Rodriguez, age 50. 31 Ave & 51 St.</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+</div>
     
-    <div class="scroll-container">
-      <img src="BordenAve_2St_4.jpg" alt="White bike and plaque attached to street sign" width="85%">
-      <img src="21St_46Ave_5.jpg" alt="White bike and plaque attached to a street sign, next to parked car" width="85%">
-      <img src="QueensPlazaNorth_29St_4.jpg" alt="White plaque attached to street sign in bike path plaza" width="85%">
-      <img src="MauriceAve_BordenAve.jpg" alt="White plaque attached to street sign near highway entrance" width="85%">
-      <img src="48St_LIE.jpg" alt="White bike chained to post with weeds growing around it near highway entrance" width="85%">
-      <img src="35St_23Ave_5.jpg" alt="White bike and plaque chained to street sign between a car parked on the street and another parked on the sidewalk" width="85%">
-      <img src="34St_30Ave_2.jpg" alt="White bike with bent back tire chained to metal bike rack near parked cars" width="85%">
-      <img src="Broadway_BaxterAve_7.jpg" alt="White plaque and white bike decorated with fake flowers chained to street sign in median" width="85%">
-      <img src="31Ave_51St.jpg" alt="White bike chained to street sign near intersection" width="85%">
-    </div>
-    
-    <script src="home.js"></script>
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  
+  <script src="home.js"></script>
   </body>
 </html>
