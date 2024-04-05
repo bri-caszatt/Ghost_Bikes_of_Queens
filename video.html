@@ -20,7 +20,34 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
-    <h1>Ghost Bikes of Queens</h1>
+
+  <center>
+    <video width="80%" id="myVideo" controls autoplay>
+      <source src="time-lapse-sunrise-com1.mp4" id="mp4Source" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </center>
+  
+  <script type='text/javascript'>
+     var count=1;
+     var player=document.getElementById('myVideo');
+     var mp4Vid = document.getElementById('mp4Source');
+     player.addEventListener('ended',myHandler,false);
+  
+     function myHandler(e)
+     {
+  
+        if(!e) 
+        {
+           e = window.event; 
+        }
+        count++;
+        mp4Vid.setAttribute("src","time-lapse-sunrise-com"+count+".mp4");
+        player.load();
+        player.play();
+     }
+  
+  </script>
     <script src="home.js"></script>
   </body>
 </html>
