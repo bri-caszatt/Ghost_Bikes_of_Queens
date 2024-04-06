@@ -59,3 +59,11 @@ body {
       text-align: left;
     }
   }
+
+  .definition {
+    padding-left: 20%;
+  }
+
+  .home {
+    border-radius: 10px;
+  }
